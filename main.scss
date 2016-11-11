@@ -1,0 +1,103 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Lato';
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  #logo {
+    font-weight: 900;
+    font-size: 25px;
+    width: 50%;
+  }
+
+  height: 70px;
+  align-items: center;
+  padding: 0 5vw;
+
+  a {
+    padding: 0 10px;
+    color: #444;
+    text-decoration: none;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  background-color: #444;
+  color: white;
+  flex: 1;
+
+  .about {
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+
+  .heading {
+    padding: 1em 2em;
+  }
+
+  p {
+    padding: 1em 2em;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      height: 50px;
+      background-color: purple;
+      color: white;
+      flex: 1;
+      border: 1px white solid;
+      cursor: pointer;
+      min-width: 30%;
+      text-align: center;
+      line-height: 50px;
+      text-decoration: none;
+      background-image: url(http://lorempixel.com/200/50/cats);
+      background-size: cover;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    height: 150vh;
+  }
+  section {
+    .heading {
+      padding: 0.5em;
+    }
+    p {
+      margin: 0;
+      text-align: center;
+    }
+    .about {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
